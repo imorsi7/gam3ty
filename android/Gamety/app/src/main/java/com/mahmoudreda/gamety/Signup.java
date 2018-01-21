@@ -12,7 +12,7 @@ public class Signup extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        Button x=(Button)findViewById(R.id.all);
+        Button x= findViewById(R.id.all);
         x.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
