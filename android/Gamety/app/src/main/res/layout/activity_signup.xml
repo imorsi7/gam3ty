@@ -5,58 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mahmoudreda.gamety.signup">
+    tools:context="com.mahmoudreda.gamety.Signup">
 
-
-    <ImageButton
-        android:id="@+id/imageButton"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_input_add" />
+        android:text="your name:"
+        tools:ignore="HardcodedText" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editText_name_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:inputType="textPersonName"
+        tools:ignore="LabelFor" />
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your ID:"
+        tools:ignore="HardcodedText" />
 
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="University Mail"
-            android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/editText_id_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        tools:ignore="LabelFor" />
 
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPersonName" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Email:"
+        tools:ignore="HardcodedText" />
 
+    <EditText
+        android:id="@+id/editText_email_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:ignore="LabelFor" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="password :"
+        tools:ignore="HardcodedText" />
 
+    <EditText
+        android:id="@+id/editText_password_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        tools:ignore="LabelFor" />
 
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Re-enter password"
-            android:inputType="textPersonName" />
-        <Button
-            android:id="@+id/up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="sign up"/>
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm password:"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editText_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/button_sign_up_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sign up"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>

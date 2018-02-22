@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mahmoudreda.gamety.Start">
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_above="@+id/login_views_layout"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/sign_in" />
+
+    <LinearLayout
+        android:id="@+id/login_views_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="9dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_above="@id/button_sign_up"
+        android:padding="5dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorView">
+
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorView">
+
+        </View>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_do_not_have_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_sign_up"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="9dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="@string/if_you_don_t_have_account"
+        app:layout_constraintTop_toBottomOf="@+id/login_views_layout"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="57dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginEnd="200dp"
+        android:text="@string/sign_up" />
+</RelativeLayout>

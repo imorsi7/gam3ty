@@ -3,11 +3,11 @@ package com.mahmoudreda.gamety;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Signup extends Activity {
+public class Start extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_start);
     }
 }
