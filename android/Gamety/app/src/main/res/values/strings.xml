@@ -17,5 +17,8 @@
     <string name="title_activity_adv_dash_board">ADV_dash_board</string>
     <string name="title_activity_courses_content">Courses_content</string>
     <string name="title_activity_notification">notification</string>
+    <string name="doctor">Doctor</string>
+    <string name="secretary">Secretary</string>
+    <string name="student">Student</string>
 
 </resources>
