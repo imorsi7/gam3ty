@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".choose" />
+        <activity android:name=".dash" />
+        <activity android:name=".link" />
+        <activity android:name=".schedule"></activity>
     </application>
 
 </manifest>
