@@ -12,24 +12,15 @@
         <activity android:name=".Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Sign_up" />
         <activity android:name=".sign_in" />
-        <activity
-            android:name=".schedule"
-            android:label="@string/title_activity_schedule" />
-        <activity
-            android:name=".ADV_dash_board"
-            android:label="@string/title_activity_adv_dash_board" />
-        <activity
-            android:name=".Courses_content"
-            android:label="@string/title_activity_courses_content" />
-        <activity
-            android:name=".notification"
-            android:label="@string/title_activity_notification"></activity>
+        <activity android:name=".schedule"/>
+        <activity android:name=".ADV_dash_board" />
+        <activity android:name=".Courses_content" />
+        <activity android:name=".notification"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

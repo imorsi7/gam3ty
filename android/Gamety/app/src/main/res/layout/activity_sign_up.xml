@@ -19,12 +19,38 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="your name:"
+                android:text="first name:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:ignore="HardcodedText" />
 
             <EditText
-                android:id="@+id/editText_name_sign_up"
+                android:id="@+id/editText_first_name_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Middle name:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editText_middle_name_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="last name:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editText_last_name_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -33,7 +59,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your ID:"
+                android:text="ID:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:ignore="HardcodedText" />
 
@@ -47,7 +73,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your Email:"
+                android:text="Email:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:ignore="HardcodedText" />
 
@@ -70,21 +96,6 @@
                 android:id="@+id/editText_password_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                tools:ignore="LabelFor" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Confirm password:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editText_confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
                 android:inputType="textPassword"
                 tools:ignore="LabelFor" />
 
