@@ -1,9 +1,9 @@
 package com.mahmoudreda.gamety;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Courses_content extends AppCompatActivity {
+public class Courses_content extends Activity {
 
     private TextView mTextMessage;
 
@@ -44,23 +44,26 @@ public class Courses_content extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courses_content);
 
-        ArrayList<ListItem> items = new ArrayList<ListItem>() ;
-        items.add(new ListItem("" ,""));
-        items.add(new ListItem("" ,""));
-        items.add(new ListItem("" ,""));
+        ArrayList<ListItem> items = new ArrayList<>();
+        items.add(new ListItem("", ""));
+        items.add(new ListItem("", ""));
+        items.add(new ListItem("", ""));
         MyCustomAdapter myadapter = new MyCustomAdapter(items);
-        ListView ls = (ListView) findViewById(R.id.list_view_course);
+        ListView ls = findViewById(R.id.list_view_course);
         ls.setAdapter(myadapter);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        mTextMessage = findViewById(R.id.message);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
     class MyCustomAdapter extends BaseAdapter {
 
-        ArrayList<ListItem> items = new ArrayList<ListItem>() ;
-        MyCustomAdapter (ArrayList<ListItem> items) {  this.items=items; }
+        ArrayList<ListItem> items = new ArrayList<ListItem>();
+
+        MyCustomAdapter(ArrayList<ListItem> items) {
+            this.items = items;
+        }
 
 
         @Override
@@ -82,10 +85,10 @@ public class Courses_content extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
 
             LayoutInflater inflater = getLayoutInflater();
-            View view1 = inflater.inflate(R.layout.rowview,null);
+            View view1 = inflater.inflate(R.layout.rowview, null);
 
-            EditText txtname = (EditText) view1.findViewById(R.id.txtsubjname);
-            EditText txtlink = (EditText) view1.findViewById(R.id.txtsubjlink);
+            EditText txtname = view1.findViewById(R.id.txtsubjname);
+            EditText txtlink = view1.findViewById(R.id.txtsubjlink);
             txtname.setText(items.get(i).name);
             txtlink.setText(items.get(i).link);
             return view1;
