@@ -16,6 +16,7 @@ public class Start extends Activity {
 
         final Button y = findViewById(R.id.button_sign_up);
         final Button x = findViewById(R.id.button_sign_in);
+
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,10 +33,11 @@ public class Start extends Activity {
         });
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
         String Name = sharedpreferences.getString("Name", null); // getting String;
-        if (Name.toString().length() == 9) {
-            Intent i = new Intent(getApplicationContext(), sign_in.class);
+        if (Name.toString().length() == 8) {
+            Intent i = new Intent(getApplicationContext(), schedule.class);
             startActivity(i);
 
         }
+
     }
 }
