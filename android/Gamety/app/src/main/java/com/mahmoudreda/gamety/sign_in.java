@@ -30,12 +30,28 @@ public class sign_in extends Activity {
 
 
                 if (id_sign_in.length() >= 1 || password_sign_in.length() >= 1) {
-                    if (id_sign_in.length() == 8) {
+                    if (id_sign_in.length() != 8 || id_sign_in.length() != 6 || id_sign_in.length() != 4) {
+                        Toast.makeText(sign_in.this, "Please Enter Right ID", Toast.LENGTH_LONG).show();
+                    } else if (id_sign_in.length() == 8) {
+                        sign_in_data_base_stu my_data = new sign_in_data_base_stu();
+                        my_data.x = getApplicationContext();
+                        my_data.execute(id_sign_in, password_sign_in);
+                        Intent i = new Intent(getApplicationContext(), schedule.class);
+                        startActivity(i);
+
+                        SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putString("Name", id_sign_in);
+                        editor.commit();
+
+                        Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_LONG).show();
+                    } else if (id_sign_in.length() == 6) {
                         sign_in_data_base my_data = new sign_in_data_base();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
                         Intent i = new Intent(getApplicationContext(), schedule.class);
                         startActivity(i);
+
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putString("Name", id_sign_in);
@@ -44,16 +60,22 @@ public class sign_in extends Activity {
                         Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_LONG).show();
 
                     } else {
-                        sign_in_data_base my_data = new sign_in_data_base();
+                        sign_in_data_base_sec my_data = new sign_in_data_base_sec();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
-                        Intent i = new Intent(getApplicationContext(), Start.class);
+                        Intent i = new Intent(getApplicationContext(), schedule.class);
                         startActivity(i);
-                    }
-                } else
 
-                {
-                    Toast.makeText(sign_in.this, "please inter your data ", Toast.LENGTH_LONG).show();
+                        SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putString("Name", id_sign_in);
+                        editor.commit();
+
+                        Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_LONG).show();
+
+                    }
+                } else {
+                    Toast.makeText(sign_in.this, "please Enter your data ", Toast.LENGTH_LONG).show();
                     SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString("Name", id_sign_in);

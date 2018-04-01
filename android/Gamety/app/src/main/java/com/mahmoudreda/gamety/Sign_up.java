@@ -36,20 +36,27 @@ public class Sign_up extends Activity {
                 password_sign_up = g.getText().toString();
 
                 if (first_name.length() >= 1 || middle_name.length() >= 1 || last_name.length() >= 1 || id_sign_up.length() >= 1 || email_sign_up.length() >= 1 || password_sign_up.length() >= 1) {
-                    if (id_sign_up.length() == 8) {
-                        sign_up_to_data_base my_data = new sign_up_to_data_base();
+                    if (id_sign_up.length() != 8 || id_sign_up.length() != 6 || id_sign_up.length() != 4) {
+                        Toast.makeText(Sign_up.this, "Please Enter Right ID", Toast.LENGTH_LONG).show();
+                    } else if (id_sign_up.length() == 8) {
+                        sign_up_to_data_base_stu my_data = new sign_up_to_data_base_stu();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
                         Toast.makeText(Sign_up.this, "welcome student", Toast.LENGTH_LONG).show();
-                    } else {
+                    } else if (id_sign_up.length() == 6) {
                         sign_up_to_data_base my_data = new sign_up_to_data_base();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
+                        Toast.makeText(Sign_up.this, "welcome Doctor", Toast.LENGTH_LONG).show();
+                    } else if (id_sign_up.length() == 4) {
+                        sign_up_to_data_base_sec my_data = new sign_up_to_data_base_sec();
+                        my_data.x = getApplicationContext();
+                        my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
+                        Toast.makeText(Sign_up.this, "welcome secretary", Toast.LENGTH_LONG).show();
                     }
-                } else
 
-                {
-                    Toast.makeText(Sign_up.this, "please inter your data ", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(Sign_up.this, "Please Enter your data ", Toast.LENGTH_LONG).show();
                 }
             }
         });
