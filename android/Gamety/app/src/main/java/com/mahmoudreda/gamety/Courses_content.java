@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -87,8 +86,8 @@ public class Courses_content extends AppCompatActivity {
             LayoutInflater inflater = getLayoutInflater();
             View view1 = inflater.inflate(R.layout.rowview, null);
 
-            EditText txtname = view1.findViewById(R.id.txtsubjname);
-            EditText txtlink = view1.findViewById(R.id.txtsubjlink);
+            TextView txtname = view1.findViewById(R.id.txtsubjname);
+            TextView txtlink = view1.findViewById(R.id.txtsubjlink);
             txtname.setText(items.get(i).name);
             txtlink.setText(items.get(i).link);
             return view1;

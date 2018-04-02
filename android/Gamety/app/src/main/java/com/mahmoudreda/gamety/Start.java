@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Start extends AppCompatActivity {
     @Override
@@ -33,22 +34,23 @@ public class Start extends AppCompatActivity {
         });
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
         String Name = sharedpreferences.getString("Name", null); // getting String;
-        if (Name.length() == 8 ) {
-            Intent i = new Intent(getApplicationContext(), ADV_dash_board.class);
+        if (Name == null) {
+            Toast.makeText(this, "welcome", Toast.LENGTH_SHORT).show();
+
+
+        } else if (Name.length() == 8) {
+            Intent i = new Intent(getApplicationContext(), MainActivity_student.class);
             startActivity(i);
 
-        }
-        else if (Name.length() == 6)
-        {
+        } else if (Name.length() == 6) {
             Intent i = new Intent(getApplicationContext(), schedule.class);
             startActivity(i);
 
-        }
-        else if (Name.length() == 4)
-        {
+        } else if (Name.length() == 4) {
             Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec.class);
             startActivity(i);
 
         }
+
     }
 }

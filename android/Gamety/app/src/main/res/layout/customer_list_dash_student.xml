@@ -18,5 +18,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text2"
-        android:textAppearance="@android:style/TextAppearance.Holo.Light.DialogWindowTitle" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 </LinearLayout>

@@ -28,18 +28,19 @@ public class sign_in extends AppCompatActivity {
                 id_sign_in = id.getText().toString();
                 password_sign_in = pass.getText().toString();
 
-                if (id_sign_in.length() >= 1 || password_sign_in.length() >= 1) {
+                if (password_sign_in.length() >= 4 && id_sign_in.length() >= 4) {
                     if (id_sign_in.length() == 8) {
                         sign_in_data_base_stu my_data = new sign_in_data_base_stu();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
-                        Intent i = new Intent(getApplicationContext(),ADV_dash_board.class);
+                        Intent i = new Intent(getApplicationContext(), MainActivity_student.class);
                         startActivity(i);
 
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedpreferences.edit();
-                        editor.putString("id", id_sign_in);
+                        editor.putString("Name", id_sign_in);
                         editor.apply();
+
                         Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_LONG).show();
                     } else if (id_sign_in.length() == 6) {
                         sign_in_data_base my_data = new sign_in_data_base();
@@ -50,7 +51,7 @@ public class sign_in extends AppCompatActivity {
 
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedpreferences.edit();
-                        editor.putString("pass", id_sign_in);
+                        editor.putString("Name", id_sign_in);
                         editor.apply();
 
                         Toast.makeText(sign_in.this, "welcome Doctor", Toast.LENGTH_LONG).show();

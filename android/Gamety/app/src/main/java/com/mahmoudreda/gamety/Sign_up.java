@@ -26,16 +26,16 @@ public class Sign_up extends AppCompatActivity {
         l = findViewById(R.id.button_sign_up_data);
 
         l.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        id_sign_up = w.getText().toString();
+            @Override
+            public void onClick(View v) {
+                id_sign_up = w.getText().toString();
                 first_name = x.getText().toString();
                 middle_name = y.getText().toString();
                 last_name = p.getText().toString();
                 email_sign_up = z.getText().toString();
                 password_sign_up = g.getText().toString();
 
-                if (first_name.length() >= 1 || middle_name.length() >= 1 || last_name.length() >= 1 || id_sign_up.length() >= 1 || email_sign_up.length() >= 1 || password_sign_up.length() >= 1) {
+                if (first_name.length() >= 1 && middle_name.length() >= 1 && last_name.length() >= 1 && id_sign_up.length() >= 4 && email_sign_up.length() >= 1 && password_sign_up.length() >= 1) {
                     if (id_sign_up.length() == 8) {
                         sign_up_to_data_base_stu my_data = new sign_up_to_data_base_stu();
                         my_data.x = getApplicationContext();

@@ -22,5 +22,8 @@
     <string name="student">Student</string>
     <string name="text">اعلان هام للفرقة الاولي</string>
     <string name="text2">يوم الاحد اجازة</string>
+    <string name="dash_board">Dash board</string>
+    <string name="courses_content">Courses content</string>
+    <string name="schedule">Schedule</string>
 
 </resources>
