@@ -99,28 +99,13 @@
                 android:inputType="textPassword"
                 tools:ignore="LabelFor" />
 
-            <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/student" />
-
-            <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/doctor" />
-
-            <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:focusable="auto"
-                android:text="@string/secretary" />
-
             <Button
                 android:id="@+id/button_sign_up_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="sign up"
+                android:background="@color/colorHide"
+                android:textColor="@color/colorWhite"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 tools:ignore="HardcodedText" />
         </LinearLayout>

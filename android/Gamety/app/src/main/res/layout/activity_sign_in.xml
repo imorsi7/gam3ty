@@ -51,5 +51,7 @@
         android:layout_below="@+id/editText_password_sign_in"
         android:layout_marginTop="70dp"
         android:text="@string/log_in"
+        android:background="@color/colorHide"
+        android:textColor="@color/colorWhite"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 </RelativeLayout>

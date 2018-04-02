@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mahmoudreda.gamety">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,18 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Start">
+        <activity android:name=".ADV_dash_board_sec">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Sign_up" />
         <activity android:name=".sign_in" />
-        <activity android:name=".schedule"/>
+        <activity android:name=".schedule" />
         <activity android:name=".ADV_dash_board" />
         <activity android:name=".Courses_content" />
-        <activity android:name=".notification"></activity>
+        <activity android:name=".notification" />
+        <activity android:name=".Start"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

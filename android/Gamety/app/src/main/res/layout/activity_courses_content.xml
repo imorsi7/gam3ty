@@ -32,9 +32,9 @@
 
     <ListView
         android:id="@+id/list_view_course"
-        android:layout_width="match_parent"
+        android:layout_width="442dp"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-         />
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,14 +1,14 @@
 package com.mahmoudreda.gamety;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class Start extends Activity {
+public class Start extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +33,7 @@ public class Start extends Activity {
         });
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
         String Name = sharedpreferences.getString("Name", null); // getting String;
-        if (Name.toString().length() == 8) {
+        if (Name.length() == 8 || Name.length() == 6 || Name.length() == 4) {
             Intent i = new Intent(getApplicationContext(), schedule.class);
             startActivity(i);
 

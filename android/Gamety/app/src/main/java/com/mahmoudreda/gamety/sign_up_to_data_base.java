@@ -1,6 +1,7 @@
 package com.mahmoudreda.gamety;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -37,13 +38,16 @@ public class sign_up_to_data_base extends AsyncTask<String, Void, String> {
 
             return buffer.toString();
         } catch (Exception e) {
-            return new String("Exception: " + e.getMessage());
+            return "Exception: " + e.getMessage();
         }
 
     }
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(x, result, Toast.LENGTH_LONG).show();
+        Toast.makeText(x, ""+result, Toast.LENGTH_LONG).show();
+
+
     }
+
 }
