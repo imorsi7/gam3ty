@@ -33,7 +33,7 @@ public class sign_in extends AppCompatActivity {
                         sign_in_data_base_stu my_data = new sign_in_data_base_stu();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
-                        Intent i = new Intent(getApplicationContext(), schedule.class);
+                        Intent i = new Intent(getApplicationContext(),ADV_dash_board.class);
                         startActivity(i);
 
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
@@ -59,7 +59,7 @@ public class sign_in extends AppCompatActivity {
                         sign_in_data_base_sec my_data = new sign_in_data_base_sec();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
-                        Intent i = new Intent(getApplicationContext(), schedule.class);
+                        Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec.class);
                         startActivity(i);
 
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);

@@ -33,11 +33,22 @@ public class Start extends AppCompatActivity {
         });
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
         String Name = sharedpreferences.getString("Name", null); // getting String;
-        if (Name.length() == 8 || Name.length() == 6 || Name.length() == 4) {
+        if (Name.length() == 8 ) {
+            Intent i = new Intent(getApplicationContext(), ADV_dash_board.class);
+            startActivity(i);
+
+        }
+        else if (Name.length() == 6)
+        {
             Intent i = new Intent(getApplicationContext(), schedule.class);
             startActivity(i);
 
         }
+        else if (Name.length() == 4)
+        {
+            Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec.class);
+            startActivity(i);
 
+        }
     }
 }

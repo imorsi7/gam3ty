@@ -32,7 +32,7 @@
         tools:ignore="MissingConstraints" />
 
     <ListView
-        android:id="@+id/list_dash"
+        android:id="@+id/list_dash_student"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
          />

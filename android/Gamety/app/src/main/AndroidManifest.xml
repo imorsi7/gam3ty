@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ADV_dash_board_sec">
+        <activity android:name=".Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
         <activity android:name=".ADV_dash_board" />
         <activity android:name=".Courses_content" />
         <activity android:name=".notification" />
-        <activity android:name=".Start"></activity>
+        <activity android:name=".ADV_dash_board_sec"></activity>
     </application>
 
 </manifest>
