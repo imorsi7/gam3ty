@@ -20,6 +20,7 @@ public class MY_adapter extends BaseAdapter {
         this.title = title;
         this.description = description;
     }
+
     public int getCount() {
         return title.length;
     }

@@ -1,11 +1,14 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.sign_package;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.mahmoudreda.gamety.R;
 
 public class Sign_up extends AppCompatActivity {
 
@@ -40,16 +43,22 @@ public class Sign_up extends AppCompatActivity {
                         sign_up_to_data_base_stu my_data = new sign_up_to_data_base_stu();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
+                        Intent i = new Intent(getApplicationContext(), sign_in.class);
+                        startActivity(i);
                         Toast.makeText(Sign_up.this, "welcome student", Toast.LENGTH_LONG).show();
                     } else if (id_sign_up.length() == 6) {
                         sign_up_to_data_base my_data = new sign_up_to_data_base();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
+                        Intent i = new Intent(getApplicationContext(), sign_in.class);
+                        startActivity(i);
                         Toast.makeText(Sign_up.this, "welcome Doctor", Toast.LENGTH_LONG).show();
                     } else if (id_sign_up.length() == 4) {
                         sign_up_to_data_base_sec my_data = new sign_up_to_data_base_sec();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
+                        Intent i = new Intent(getApplicationContext(), sign_in.class);
+                        startActivity(i);
                         Toast.makeText(Sign_up.this, "welcome secretary", Toast.LENGTH_LONG).show();
                     } else {
 

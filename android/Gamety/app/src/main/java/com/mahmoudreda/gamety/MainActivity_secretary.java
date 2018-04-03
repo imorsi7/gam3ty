@@ -13,16 +13,17 @@ import android.widget.Toast;
 import com.mahmoudreda.gamety.sign_package.Sign_up;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 
-public class MainActivity_student extends AppCompatActivity {
+public class MainActivity_secretary extends AppCompatActivity {
     Button x, y, k;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_student);
-        x = findViewById(R.id.Button_Schedule);
-        y = findViewById(R.id.Button_dash_board);
-        k = findViewById(R.id.Button_courses_content);
+        setContentView(R.layout.activity_main_secretary);
+
+        x = findViewById(R.id.Button_schedule_sec);
+        y = findViewById(R.id.Button_dash_board_sec);
+        k = findViewById(R.id.Button_link_techer);
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +34,7 @@ public class MainActivity_student extends AppCompatActivity {
         y.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ADV_dash_board.class);
+                Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec.class);
                 startActivity(i);
             }
         });
@@ -57,17 +58,16 @@ public class MainActivity_student extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-
         int id = item.getItemId();
         switch (id) {
             case R.id.navigation_dashboard:
                 Toast.makeText(this, "current year", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(MainActivity_student.this, Sign_up.class);
+                Intent intent2 = new Intent(MainActivity_secretary.this, Sign_up.class);
                 startActivity(intent2);
                 break;
             case R.id.Log_out:
                 Toast.makeText(this, "log out", Toast.LENGTH_SHORT).show();
-                Intent intent1 = new Intent(MainActivity_student.this, sign_in.class);
+                Intent intent1 = new Intent(MainActivity_secretary.this, sign_in.class);
                 startActivity(intent1);
                 break;
         }
@@ -75,9 +75,3 @@ public class MainActivity_student extends AppCompatActivity {
 
     }
 }
-
-
-/*
-*
-* startActivity(new Intent(Intent.ACTION_SEND , Uri.parse("http:///www.google.com/")));
-* */

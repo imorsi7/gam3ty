@@ -19,8 +19,7 @@ public class dash_board_get_data extends AsyncTask<Void, Void, String> {
     String[] description;
     ListView l;
 
-    public dash_board_get_data(ListView z)
-    {
+    public dash_board_get_data(ListView z) {
         l = z;
     }
 
@@ -55,14 +54,13 @@ public class dash_board_get_data extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        String Lines[]=result.split("<br/>");
-        title =new String[Lines.length-1];
-        description=new String[Lines.length-1];
-        for (int i=0;i<Lines.length-1;i++)
-        {
-            String arr[]=Lines[i].split(",");
-            title[i]=arr[0];
-            description[i]=arr[1];
+        String Lines[] = result.split("<br/>");
+        title = new String[Lines.length - 1];
+        description = new String[Lines.length - 1];
+        for (int i = 0; i < Lines.length - 1; i++) {
+            String arr[] = Lines[i].split(",");
+            title[i] = arr[0];
+            description[i] = arr[1];
         }
 
         MY_adapter my_adapter = new MY_adapter(title, description);

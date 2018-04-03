@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.sign_package;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.mahmoudreda.gamety.MainActivity_secretary;
+import com.mahmoudreda.gamety.MainActivity_student;
+import com.mahmoudreda.gamety.R;
+import com.mahmoudreda.gamety.upload_courses_content_doctor;
 
 public class sign_in extends AppCompatActivity {
 
@@ -46,7 +51,7 @@ public class sign_in extends AppCompatActivity {
                         sign_in_data_base my_data = new sign_in_data_base();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
-                        Intent i = new Intent(getApplicationContext(), schedule.class);
+                        Intent i = new Intent(getApplicationContext(), upload_courses_content_doctor.class);
                         startActivity(i);
 
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
@@ -60,7 +65,7 @@ public class sign_in extends AppCompatActivity {
                         sign_in_data_base_sec my_data = new sign_in_data_base_sec();
                         my_data.x = getApplicationContext();
                         my_data.execute(id_sign_in, password_sign_in);
-                        Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec.class);
+                        Intent i = new Intent(getApplicationContext(), MainActivity_secretary.class);
                         startActivity(i);
 
                         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);

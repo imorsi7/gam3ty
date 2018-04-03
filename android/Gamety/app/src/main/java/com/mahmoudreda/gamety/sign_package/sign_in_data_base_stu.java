@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.sign_package;
 
 import android.content.Context;
 import android.os.AsyncTask;

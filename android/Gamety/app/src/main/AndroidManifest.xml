@@ -18,14 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Sign_up" />
-        <activity android:name=".sign_in" />
+        <activity android:name=".MainActivity_student" />
+        <activity android:name=".sign_package.Sign_up" />
+        <activity android:name=".sign_package.sign_in" />
         <activity android:name=".schedule" />
         <activity android:name=".ADV_dash_board" />
         <activity android:name=".Courses_content" />
-        <activity android:name=".notification" />
         <activity android:name=".ADV_dash_board_sec" />
-        <activity android:name=".MainActivity_student"></activity>
+        <activity android:name=".MainActivity_secretary" />
+        <activity android:name=".upload_courses_content_doctor"></activity>
     </application>
 
 </manifest>

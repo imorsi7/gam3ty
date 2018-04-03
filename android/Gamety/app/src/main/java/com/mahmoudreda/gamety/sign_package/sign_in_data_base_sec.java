@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.sign_package;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class sign_up_to_data_base_stu extends AsyncTask<String, Void, String> {
+public class sign_in_data_base_sec extends AsyncTask<String, Void, String> {
     Context x;
 
     protected void onPreExecute() {
@@ -19,7 +19,7 @@ public class sign_up_to_data_base_stu extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... arg0) {
         try {
 
-            URL url = new URL("https://gamety.000webhostapp.com/signupstu.php?student_ID=" + arg0[0] + "&first_name=" + arg0[1] + "&middle_name=" + arg0[2] + "&last_name=" + arg0[3] + "&email=" + arg0[4] + "&passcode=" + arg0[5]);
+            URL url = new URL("https://gamety.000webhostapp.com/signinsec.php?secretary_ID=" + arg0[0] + "&passcode=" + arg0[1]);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -39,11 +39,11 @@ public class sign_up_to_data_base_stu extends AsyncTask<String, Void, String> {
         } catch (Exception e) {
             return new String("Exception: " + e.getMessage());
         }
-
     }
 
     @Override
     protected void onPostExecute(String result) {
         Toast.makeText(x, result, Toast.LENGTH_LONG).show();
+
     }
 }

@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.mahmoudreda.gamety.sign_package.Sign_up;
+import com.mahmoudreda.gamety.sign_package.sign_in;
+
 public class Start extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +44,15 @@ public class Start extends AppCompatActivity {
         } else if (Name.length() == 8) {
             Intent i = new Intent(getApplicationContext(), MainActivity_student.class);
             startActivity(i);
-
+            finish();
         } else if (Name.length() == 6) {
-            Intent i = new Intent(getApplicationContext(), schedule.class);
+            Intent i = new Intent(getApplicationContext(), upload_courses_content_doctor.class);
             startActivity(i);
-
+            finish();
         } else if (Name.length() == 4) {
-            Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity_secretary.class);
             startActivity(i);
-
+            finish();
         }
 
     }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="11dp"
-    tools:context="com.mahmoudreda.gamety.sign_in">
+    tools:context="com.mahmoudreda.gamety.sign_package.sign_in">
 
     <TextView
         android:id="@+id/textView"

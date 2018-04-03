@@ -25,5 +25,7 @@
     <string name="dash_board">Dash board</string>
     <string name="courses_content">Courses content</string>
     <string name="schedule">Schedule</string>
+    <string name="techer_s_courses">teacher\'s courses</string>
+    <string name="log_out">Log out</string>
 
 </resources>
