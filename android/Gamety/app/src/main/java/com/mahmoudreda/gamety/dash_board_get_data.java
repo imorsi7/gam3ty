@@ -29,7 +29,7 @@ public class dash_board_get_data extends AsyncTask<Void, Void, String> {
 
     protected String doInBackground(Void... arg0) {
         try {
-            URL url = new URL("http://192.168.1.7/android_chat/get.php");
+            URL url = new URL("https://gamety.000webhostapp.com/get.php");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -54,10 +54,10 @@ public class dash_board_get_data extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        String Lines[] = result.split("<br/>");
-        title = new String[Lines.length - 1];
-        description = new String[Lines.length - 1];
-        for (int i = 0; i < Lines.length - 1; i++) {
+        String Lines[] = result.split(",");
+        title = new String[Lines.length];
+        description = new String[Lines.length];
+        for (int i = 0; i < Lines.length; i++) {
             String arr[] = Lines[i].split(",");
             title[i] = arr[0];
             description[i] = arr[1];

@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class ADV_dash_board_sec extends AppCompatActivity {
 
     EditText post, post_title;
-    String bost, bost_title;
+    String bost, bost_title,id="";
     Button P;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class ADV_dash_board_sec extends AppCompatActivity {
                 if (bost.length() >= 1 || bost_title.length() >= 1) {
                     dash_board_set_data my_data = new dash_board_set_data();
                     my_data.x = getApplicationContext();
-                    my_data.execute(bost, bost_title);
+                    my_data.execute(id,bost_title,bost);
                     Toast.makeText(ADV_dash_board_sec.this, "Loading....", Toast.LENGTH_LONG).show();
                 } else
                     Toast.makeText(ADV_dash_board_sec.this, "Enter data first", Toast.LENGTH_LONG).show();
