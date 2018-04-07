@@ -1,6 +1,8 @@
 package com.mahmoudreda.gamety;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -67,11 +69,21 @@ public class MainActivity_student extends AppCompatActivity {
                 Toast.makeText(this, "current year", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(MainActivity_student.this, Sign_up.class);
                 startActivity(intent2);
+                finish();
+                SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString("Name", null);
+                editor.apply();
                 break;
             case R.id.Log_out:
                 Toast.makeText(this, "log out", Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(MainActivity_student.this, sign_in.class);
                 startActivity(intent1);
+                finish();
+                SharedPreferences sharedpreferencess = getSharedPreferences("data", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editors = sharedpreferencess.edit();
+                editors.putString("Name", null);
+                editors.apply();
                 break;
         }
         return super.onOptionsItemSelected(item);

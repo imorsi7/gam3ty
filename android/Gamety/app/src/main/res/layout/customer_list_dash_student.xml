@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text"
+        android:textColor="@color/colorHide"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold|italic" />
 
@@ -18,5 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text2"
+        android:textColor="@color/colorHide"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 </LinearLayout>

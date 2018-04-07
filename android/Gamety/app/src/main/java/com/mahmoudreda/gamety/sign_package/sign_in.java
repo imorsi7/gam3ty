@@ -52,7 +52,7 @@ public class sign_in extends AppCompatActivity {
                     my_data.execute(id_sign_in, password_sign_in);
                     Intent i = new Intent(getApplicationContext(), MainActivity_student.class);
                     startActivity(i);
-
+                    finish();
                     SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString("Name", id_sign_in);
@@ -70,6 +70,7 @@ public class sign_in extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString("Name", id_sign_in);
                     editor.apply();
+                    finish();
 
                     Toast.makeText(sign_in.this, "welcome Doctor", Toast.LENGTH_LONG).show();
 
@@ -82,7 +83,7 @@ public class sign_in extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString("Name", id_sign_in);
                     editor.apply();
-
+                    finish();
                     Toast.makeText(sign_in.this, "welcome Secretary", Toast.LENGTH_LONG).show();
                 } else
                     id.setError("ID is Exist");

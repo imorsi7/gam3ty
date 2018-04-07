@@ -27,5 +27,9 @@
     <string name="schedule">Schedule</string>
     <string name="techer_s_courses">teacher\'s courses</string>
     <string name="log_out">Log out</string>
+    <string name="id">| ID</string>
+    <string name="passwor">|Password</string>
+    <string name="login">Login</string>
+    <string name="enjoy_now">Enjoy Now..</string>
 
 </resources>
