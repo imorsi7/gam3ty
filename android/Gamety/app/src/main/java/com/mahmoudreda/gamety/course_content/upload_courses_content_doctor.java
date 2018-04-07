@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.course_content;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.mahmoudreda.gamety.R;
 import com.mahmoudreda.gamety.sign_package.Sign_up;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 

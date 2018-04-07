@@ -13,13 +13,13 @@ import android.widget.Toast;
 import com.mahmoudreda.gamety.MainActivity_secretary;
 import com.mahmoudreda.gamety.MainActivity_student;
 import com.mahmoudreda.gamety.R;
-import com.mahmoudreda.gamety.upload_courses_content_doctor;
+import com.mahmoudreda.gamety.course_content.upload_courses_content_doctor;
 
 public class sign_in extends AppCompatActivity {
 
     EditText id, pass;
     Button logIn;
-    String id_sign_in, password_sign_in;
+    String id_sign_in, password_sign_in ,sec_id="1010",sec_pass="gamety admin";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,10 +61,8 @@ public class sign_in extends AppCompatActivity {
 
                         Toast.makeText(sign_in.this, "welcome Doctor", Toast.LENGTH_LONG).show();
 
-                    } else if (id_sign_in.length() == 4) {
-                        sign_in_data_base_sec my_data = new sign_in_data_base_sec();
-                        my_data.x = getApplicationContext();
-                        my_data.execute(id_sign_in, password_sign_in);
+                    } else if (id_sign_in.length() == 4&& id_sign_in.equals(sec_id)&& password_sign_in.equals(sec_pass)) {
+
                         Intent i = new Intent(getApplicationContext(), MainActivity_secretary.class);
                         startActivity(i);
 

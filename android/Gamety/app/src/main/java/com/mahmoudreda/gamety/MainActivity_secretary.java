@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.mahmoudreda.gamety.course_content.Courses_content;
+import com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec;
+import com.mahmoudreda.gamety.SChedule.schedule;
 import com.mahmoudreda.gamety.sign_package.Sign_up;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 

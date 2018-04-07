@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety.sign_package;
+package com.mahmoudreda.gamety.dash_board;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class sign_in_data_base_sec extends AsyncTask<String, Void, String> {
+public class dash_board_set_data extends AsyncTask<String, Void, String> {
     Context x;
 
     protected void onPreExecute() {
@@ -18,8 +18,8 @@ public class sign_in_data_base_sec extends AsyncTask<String, Void, String> {
 
     protected String doInBackground(String... arg0) {
         try {
-
-            URL url = new URL("https://gamety.000webhostapp.com/signinsec.php?secretary_ID=" + arg0[0] + "&passcode=" + arg0[1]);
+            /*announcement_ID="+arg0[0]+"*/
+            URL url = new URL("https://gamety.000webhostapp.com/announcement.php?announcement_title=" + arg0[1] + "&announcement_description=" + arg0[2]);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -44,6 +44,7 @@ public class sign_in_data_base_sec extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         Toast.makeText(x, result, Toast.LENGTH_LONG).show();
+
 
     }
 }

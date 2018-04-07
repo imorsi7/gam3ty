@@ -9,4 +9,11 @@
 
     </style>
 
+    <style name="Theme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

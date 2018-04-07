@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mahmoudreda.gamety.ADV_dash_board_sec">
+    tools:context="com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec">
 
 
     <ScrollView

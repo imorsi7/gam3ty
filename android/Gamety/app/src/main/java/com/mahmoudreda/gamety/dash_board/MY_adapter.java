@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.dash_board;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.mahmoudreda.gamety.R;
 
 /**
  * Created by mahmoud reda on 02/04/2018.

@@ -53,13 +53,6 @@ public class Sign_up extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), sign_in.class);
                         startActivity(i);
                         Toast.makeText(Sign_up.this, "welcome Doctor", Toast.LENGTH_LONG).show();
-                    } else if (id_sign_up.length() == 4) {
-                        sign_up_to_data_base_sec my_data = new sign_up_to_data_base_sec();
-                        my_data.x = getApplicationContext();
-                        my_data.execute(id_sign_up, first_name, middle_name, last_name, email_sign_up, password_sign_up);
-                        Intent i = new Intent(getApplicationContext(), sign_in.class);
-                        startActivity(i);
-                        Toast.makeText(Sign_up.this, "welcome secretary", Toast.LENGTH_LONG).show();
                     } else {
 
                         Toast.makeText(Sign_up.this, "Please Enter Right ID", Toast.LENGTH_LONG).show();

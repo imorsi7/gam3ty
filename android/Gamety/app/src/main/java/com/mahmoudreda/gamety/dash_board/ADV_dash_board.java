@@ -1,8 +1,10 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.dash_board;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import com.mahmoudreda.gamety.R;
 
 public class ADV_dash_board extends AppCompatActivity {
     @Override
