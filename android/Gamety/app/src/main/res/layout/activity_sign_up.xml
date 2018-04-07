@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/register"
     android:orientation="vertical"
     tools:context="com.mahmoudreda.gamety.sign_package.Sign_up">
 
@@ -14,108 +15,135 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="First name :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText"
-                android:layout_margin="9dp"/>
+                android:layout_gravity="center"
+                android:layout_marginBottom="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sign Up To Enjoy Now.."
+                android:textColor="#EEE"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editText_first_name_sign_up"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_login"
+                android:drawableLeft="@drawable/ic_face_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="| First name"
                 android:inputType="textPersonName"
-                tools:ignore="LabelFor" />
+                android:padding="10dp"
+                android:textColor="#FFF"
+                tools:ignore="LabelFor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Middle name :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText"
-                android:layout_margin="9dp"/>
 
             <EditText
                 android:id="@+id/editText_middle_name_sign_up"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_login"
+                android:drawableLeft="@drawable/ic_face_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="| Middle name"
                 android:inputType="textPersonName"
-                tools:ignore="LabelFor" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Last name :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText"
-                android:layout_margin="9dp"/>
+                android:padding="10dp"
+                android:textColor="#FFF"
+                tools:ignore="LabelFor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
             <EditText
                 android:id="@+id/editText_last_name_sign_up"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_login"
+                android:drawableLeft="@drawable/ic_face_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="| Last name"
                 android:inputType="textPersonName"
-                tools:ignore="LabelFor" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ID :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText"
-                android:layout_margin="9dp"/>
+                android:padding="10dp"
+                android:textColor="#FFF"
+                tools:ignore="LabelFor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
             <EditText
                 android:id="@+id/editText_id_sign_up"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_login"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="| ID"
                 android:inputType="number"
-                tools:ignore="LabelFor" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText"
-                android:layout_margin="9dp"/>
+                android:padding="10dp"
+                android:textColor="#FFF"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
             <EditText
                 android:id="@+id/editText_email_sign_up"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_login"
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:drawablePadding="7dp"
                 android:ems="10"
+                android:hint="| Email"
                 android:inputType="textEmailAddress"
-                tools:ignore="LabelFor" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Password  :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:ignore="HardcodedText"
-                android:layout_margin="9dp"/>
+                android:padding="10dp"
+                android:textColor="#FFF"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
             <EditText
                 android:id="@+id/editText_password_sign_up"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_login"
+                android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+                android:drawablePadding="7dp"
+                android:ems="10"
+                android:hint="|Password"
                 android:inputType="textPassword"
-                tools:ignore="LabelFor" />
+                android:padding="10dp"
+                android:textColor="#FFF"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
             <Button
                 android:id="@+id/button_sign_up_data"
-                android:layout_width="match_parent"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
-                android:text="sign up"
-                android:background="@color/colorHide"
-                android:textColor="@color/colorWhite"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:ignore="HardcodedText" />
+                android:layout_weight="1"
+                android:background="@drawable/buttonanimationcolor"
+                android:text="Sign up"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="345dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

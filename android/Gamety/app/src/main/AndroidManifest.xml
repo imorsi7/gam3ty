@@ -19,8 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity_student" />
-        <activity android:name=".sign_package.Sign_up" />
-        <activity android:name=".sign_package.sign_in" />
+        <activity android:name=".sign_package.Sign_up"
+            android:label="Sign Up"/>
+        <activity android:name=".sign_package.sign_in"
+            android:label="Login"/>
         <activity android:name=".SChedule.schedule" />
         <activity android:name=".dash_board.ADV_dash_board" />
         <activity android:name=".course_content.Courses_content" />
