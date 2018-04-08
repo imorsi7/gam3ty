@@ -14,10 +14,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.mahmoudreda.gamety.MainActivity_secretary;
 import com.mahmoudreda.gamety.MainActivity_student;
 import com.mahmoudreda.gamety.R;
 import com.mahmoudreda.gamety.course_content.upload_courses_content_doctor;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class sign_in extends AppCompatActivity {
 
@@ -58,21 +68,12 @@ public class sign_in extends AppCompatActivity {
                     editor.putString("Name", id_sign_in);
                     editor.apply();
 
-                    Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_LONG).show();
+                    Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_SHORT).show();
                 } else if (id_sign_in.length() == 6) {
-                    sign_in_data_base my_data = new sign_in_data_base();
-                    my_data.x = getApplicationContext();
-                    my_data.execute(id_sign_in, password_sign_in);
-                    Intent i = new Intent(getApplicationContext(), upload_courses_content_doctor.class);
-                    startActivity(i);
 
-                    SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString("Name", id_sign_in);
-                    editor.apply();
-                    finish();
+                    Login();
 
-                    Toast.makeText(sign_in.this, "welcome Doctor", Toast.LENGTH_LONG).show();
+                    Toast.makeText(sign_in.this, "Loading ...", Toast.LENGTH_SHORT).show();
 
                 } else if (id_sign_in.length() == 4 && id_sign_in.equals(sec_id) && password_sign_in.equals(sec_pass)) {
 
@@ -89,6 +90,59 @@ public class sign_in extends AppCompatActivity {
                     id.setError("ID is Exist");
             }
         });
+    }
+
+    // Method To Check Login User Data From DataBase
+    private void Login() {
+
+        id_sign_in = id.getText().toString().trim();
+        password_sign_in = pass.getText().toString().trim();
+
+        // URL To Fetch Data From The Server
+        String LOGIN_URL = "https://gamety.000webhostapp.com/signintech.php?teacher_ID=" + id_sign_in + "&passcode=" + password_sign_in;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (response.trim().equals("Login success welcome")) {
+                    // Saved Session
+                    SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("Name", id_sign_in);
+                    editor.apply();
+
+                    //Intent
+                    Intent intent = new Intent(getApplicationContext(), upload_courses_content_doctor.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+
+                } else if (response.trim().equals("Login not success")) {
+
+                    id.setError("The Username or Password is Exist");
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Error Send", Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "No Internet Access", Toast.LENGTH_LONG).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<>();
+                params.put("Name", id_sign_in);
+                params.put("Email", password_sign_in);
+                return params;
+            }
+        };
+
+        // Execute Requesting
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -120,5 +174,4 @@ public class sign_in extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

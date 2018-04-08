@@ -27,10 +27,6 @@ public class ADV_dash_board extends AppCompatActivity {
 
         final ListView z = findViewById(R.id.list_dash_student);
 
-      /*  dash_board_get_data my_data = new dash_board_get_data(z);
-        my_data.k = getApplicationContext();
-        my_data.execute();*/
-
         // URL To Fetch Data From The Server
         String GETURL = "https://gamety.000webhostapp.com/get.php";
 
@@ -78,6 +74,3 @@ public class ADV_dash_board extends AppCompatActivity {
     }
 
 }
-
-
-

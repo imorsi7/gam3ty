@@ -54,8 +54,9 @@
                 android:id="@+id/Button_post"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorHide"
-                android:text="Post"
+                android:background="@drawable/buttonanimationcolor"
+                android:text="@string/post"
+                android:layout_margin="20dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
                 android:textColor="@color/colorWhite" />
         </LinearLayout>

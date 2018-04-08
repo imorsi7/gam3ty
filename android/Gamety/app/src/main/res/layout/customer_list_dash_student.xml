@@ -2,23 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="12dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/title_customer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
         android:text="@string/text"
-        android:textColor="@color/colorHide"
+        android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorHide"
         android:textStyle="bold|italic" />
+
 
     <TextView
         android:id="@+id/description_customer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="7dp"
         android:text="@string/text2"
-        android:textColor="@color/colorHide"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+        android:textColor="#575757" />
 </LinearLayout>
