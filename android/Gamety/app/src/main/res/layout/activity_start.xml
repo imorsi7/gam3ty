@@ -6,40 +6,31 @@
     android:layout_height="match_parent"
     android:background="@drawable/packground"
     tools:context="com.mahmoudreda.gamety.Start">
-    <TextView
-        android:text="Hello."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="25dp"
-        tools:layout_editor_absoluteX="12dp"
-        android:id="@+id/textView3"
-        android:textSize="50dp"
-        android:textColor="@color/colorHide"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3"
-        android:text="Welcome To Gamety."
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="9dp"
+        android:text="@string/welcome_to_gamety"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorHide"
-        android:textSize="25dp"
-        app:layout_constraintLeft_toLeftOf="@+id/textView3"
+        android:textSize="30sp"
         tools:layout_editor_absoluteY="55dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView5"
         android:layout_marginTop="10dp"
-        android:text="The Best Service App."
+        android:text="@string/the_best_service_app"
         android:textColor="@color/colorHide"
-        android:textSize="16dp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_sign_in"

@@ -57,21 +57,14 @@ public class sign_in extends AppCompatActivity {
                     editor.putString("Name", id_sign_in);
                     editor.apply();
                 } else if (id_sign_in.length() == 8) {
-                    sign_in_data_base_stu my_data = new sign_in_data_base_stu();
-                    my_data.x = getApplicationContext();
-                    my_data.execute(id_sign_in, password_sign_in);
-                    Intent i = new Intent(getApplicationContext(), MainActivity_student.class);
-                    startActivity(i);
-                    finish();
-                    SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString("Name", id_sign_in);
-                    editor.apply();
 
-                    Toast.makeText(sign_in.this, "welcome student", Toast.LENGTH_SHORT).show();
+                    Login_student();
+
+                    Toast.makeText(sign_in.this, "Loading ...", Toast.LENGTH_SHORT).show();
+
                 } else if (id_sign_in.length() == 6) {
 
-                    Login();
+                    Login_techer();
 
                     Toast.makeText(sign_in.this, "Loading ...", Toast.LENGTH_SHORT).show();
 
@@ -92,8 +85,38 @@ public class sign_in extends AppCompatActivity {
         });
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.login_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.exit) {
+            //Alert Dialog In Click
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setMessage("Are You Sure Want Exit App")
+                    .setIcon(R.drawable.ic_warning_black_24dp)
+                    .setTitle("Exit Confirmation")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    }).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     // Method To Check Login User Data From DataBase
-    private void Login() {
+    private void Login_techer() {
 
         id_sign_in = id.getText().toString().trim();
         password_sign_in = pass.getText().toString().trim();
@@ -145,33 +168,54 @@ public class sign_in extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.login_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
+    private void Login_student() {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.exit) {
-            //Alert Dialog In Click
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-            alertDialog.setMessage("Are You Sure Want Exit App")
-                    .setIcon(R.drawable.ic_warning_black_24dp)
-                    .setTitle("Exit Confirmation")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+        id_sign_in = id.getText().toString().trim();
+        password_sign_in = pass.getText().toString().trim();
 
-                        }
-                    }).show();
-        }
-        return super.onOptionsItemSelected(item);
+        // URL To Fetch Data From The Server
+        String LOGIN_URL = "https://gamety.000webhostapp.com/signinstu.php?student_ID=" + id_sign_in + "&passcode=" + password_sign_in;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (response.trim().equals("Login success welcome")) {
+                    // Saved Session
+                    SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("Name", id_sign_in);
+                    editor.apply();
+
+                    //Intent
+                    Intent intent = new Intent(getApplicationContext(), MainActivity_student.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+
+                } else if (response.trim().equals("Login not success")) {
+
+                    id.setError("The Username or Password is Exist");
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Error Send", Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "No Internet Access", Toast.LENGTH_LONG).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<>();
+                params.put("Name", id_sign_in);
+                params.put("Email", password_sign_in);
+                return params;
+            }
+        };
+        // Execute Requesting
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 }

@@ -27,7 +27,6 @@ public class Start extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), sign_in.class);
                 startActivity(i);
-                finish();
             }
         });
         y.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +34,6 @@ public class Start extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Sign_up.class);
                 startActivity(i);
-                finish();
             }
         });
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);

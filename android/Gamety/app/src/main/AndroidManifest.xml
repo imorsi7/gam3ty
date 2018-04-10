@@ -19,19 +19,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity_student" />
-        <activity android:name=".sign_package.Sign_up"
-            android:label="Sign Up"/>
-        <activity android:name=".sign_package.sign_in"
-            android:label="Login"/>
-        <activity android:name=".SChedule.schedule"
-            android:label="Schedule"/>
-        <activity android:name=".dash_board.ADV_dash_board"
+        <activity
+            android:name=".sign_package.Sign_up"
+            android:label="Sign Up" />
+        <activity
+            android:name=".sign_package.sign_in"
+            android:label="Login" />
+        <activity
+            android:name=".schedule.schedule_view"
+            android:label="Schedule" />
+        <activity
+            android:name=".dash_board.ADV_dash_board"
             android:label="Dash Board" />
         <activity android:name=".course_content.Courses_content" />
-        <activity android:name=".dash_board.ADV_dash_board_sec"
-            android:label="Dash Board"/>
+        <activity
+            android:name=".dash_board.ADV_dash_board_sec"
+            android:label="Dash Board" />
         <activity android:name=".MainActivity_secretary" />
-        <activity android:name=".course_content.upload_courses_content_doctor"></activity>
+        <activity android:name=".course_content.upload_courses_content_doctor" />
+        <activity android:name=".schedule.select_schedule"
+            android:label="Schedule"/>
     </application>
 
 </manifest>

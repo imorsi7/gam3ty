@@ -30,8 +30,6 @@ public class ADV_dash_board extends AppCompatActivity {
         // URL To Fetch Data From The Server
         String GETURL = "https://gamety.000webhostapp.com/get.php";
 
-        // private ArrayList<ItemChat> list = new ArrayList<ItemChat>();
-
         // Method To Get Chat The Data From DataBase
 
         final ArrayList<item_Dash_Board> list_Item = new ArrayList<>();
@@ -70,7 +68,5 @@ public class ADV_dash_board extends AppCompatActivity {
         // Execute Requesting
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(request);
-
     }
-
 }

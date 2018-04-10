@@ -12,9 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.mahmoudreda.gamety.SChedule.schedule;
 import com.mahmoudreda.gamety.course_content.Courses_content;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec;
+import com.mahmoudreda.gamety.schedule.select_schedule;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 
 public class MainActivity_secretary extends AppCompatActivity {
@@ -31,7 +31,7 @@ public class MainActivity_secretary extends AppCompatActivity {
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), schedule.class);
+                Intent i = new Intent(getApplicationContext(), select_schedule.class);
                 startActivity(i);
             }
         });
