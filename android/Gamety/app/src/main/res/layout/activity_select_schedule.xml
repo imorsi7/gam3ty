@@ -137,6 +137,7 @@
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
 
+
             <EditText
                 android:id="@+id/EditText_day"
                 android:layout_width="match_parent"
