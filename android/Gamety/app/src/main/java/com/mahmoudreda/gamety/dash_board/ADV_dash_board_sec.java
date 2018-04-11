@@ -30,7 +30,7 @@ public class ADV_dash_board_sec extends AppCompatActivity {
                     dash_board_set_data my_data = new dash_board_set_data();
                     my_data.x = getApplicationContext();
                     my_data.execute(id,bost_title,bost);
-                    Toast.makeText(ADV_dash_board_sec.this, "Loading....", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ADV_dash_board_sec.this, "Loading...."+bost_title, Toast.LENGTH_LONG).show();
                 } else
                     Toast.makeText(ADV_dash_board_sec.this, "Enter data first", Toast.LENGTH_LONG).show();
             }

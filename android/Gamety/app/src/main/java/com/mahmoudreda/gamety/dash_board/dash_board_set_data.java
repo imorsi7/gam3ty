@@ -19,7 +19,7 @@ public class dash_board_set_data extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... arg0) {
         try {
             /*announcement_ID="+arg0[0]+"*/
-            URL url = new URL("https://gamety.000webhostapp.com/announcement.php?announcement_title=" + arg0[1] + "&announcement_description=" + arg0[2]);
+            URL url = new URL("https://gamety.000webhostapp.com/announcement.php?title=" + arg0[1] + "&description=" + arg0[2]);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");

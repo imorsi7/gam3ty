@@ -44,8 +44,8 @@ public class ADV_dash_board extends AppCompatActivity {
 
                         JSONObject ob = response.getJSONObject(i);
                         item_Dash_Board object = new item_Dash_Board();
-                        object.setTitle(ob.getString("announcement_title"));
-                        object.setDesc(ob.getString("announcement_description"));
+                        object.setTitle(ob.getString("title"));
+                        object.setDesc(ob.getString("description"));
                         list_Item.add(object);
 
                     }

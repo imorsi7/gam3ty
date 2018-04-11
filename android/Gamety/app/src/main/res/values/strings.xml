@@ -33,17 +33,18 @@
     <string name="enjoy_now">Enjoy Now..</string>
     <string name="post">Post</string>
     <string name="years">Years :</string>
-    <string name="first_year">First year</string>
-    <string name="second_year">Second year</string>
-    <string name="third_year">Third year</string>
-    <string name="fourth_year">Fourth year</string>
+    <string name="first_year">Firstyear</string>
+    <string name="second_year">Secondyear</string>
+    <string name="third_year">Thirdyear</string>
+    <string name="fourth_year">Fourthyear</string>
     <string name="departments">Departments :</string>
     <string name="general">General</string>
     <string name="cs">CS</string>
     <string name="is">IS</string>
     <string name="semester">Semester :</string>
-    <string name="first">First</string>
-    <string name="second">Second</string>
+    <string name="first">1</string>
+    <string name="second">2</string>
+    <string name="third">3</string>
     <string name="day">Day :</string>
     <string name="sun_day">sun day</string>
     <string name="period">period :</string>
@@ -55,6 +56,6 @@
     <string name="_1">1</string>
     <string name="welcome_to_gamety">Welcome To Gamety.</string>
     <string name="the_best_service_app">The Best Service App.</string>
-    <string name="third">Third</string>
+
 
 </resources>
