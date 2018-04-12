@@ -8,12 +8,11 @@
     <string name="sign_in">Sign in</string>
     <string name="if_you_don_t_have_account">if you don\'t have account</string>
     <string name="or">or</string>
-    <string name="sign_up">Sign up</string>
     <string name="your_email">Your Email :</string>
     <string name="password">Password :</string>
     <string name="log_in">Log in</string>
     <string name="title_activity_schedule">schedule</string>
-    <string name="ok">ok</string>
+    <string name="ok">OK</string>
     <string name="title_activity_adv_dash_board">ADV_dash_board</string>
     <string name="title_activity_courses_content">Courses_content</string>
     <string name="title_activity_notification">notification</string>
@@ -27,7 +26,6 @@
     <string name="schedule">Schedule</string>
     <string name="techer_s_courses">teacher\'s courses</string>
     <string name="log_out">Log out</string>
-    <string name="id">| ID</string>
     <string name="passwor">|Password</string>
     <string name="login">Login</string>
     <string name="enjoy_now">Enjoy Now..</string>
@@ -56,6 +54,17 @@
     <string name="_1">1</string>
     <string name="welcome_to_gamety">Welcome To Gamety.</string>
     <string name="the_best_service_app">The Best Service App.</string>
-
-
+    <string name="post_title">Post title :</string>
+    <string name="description">Description :</string>
+    <string name="sign_up_to">Sign Up…</string>
+    <string name="first_name">| First name</string>
+    <string name="middle_name">| Middle name</string>
+    <string name="last_name">| Last name</string>
+    <string name="id">| ID</string>
+    <string name="email">| Email</string>
+    <string name="password2">|Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="upload_courses_content">upload courses content</string>
+    <string name="exit">Exit</string>
+    <string name="current_year">Current year</string>
 </resources>

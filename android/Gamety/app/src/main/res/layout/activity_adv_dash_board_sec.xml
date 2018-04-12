@@ -17,13 +17,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="9dp"
-                android:text="Post title :"
+                android:text="@string/post_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" />
 
             <EditText
@@ -32,14 +31,15 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="9dp"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="9dp"
-                android:text="Description :"
+                android:text="@string/description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" />
 
             <EditText
@@ -48,15 +48,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="9dp"
                 android:ems="10"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                tools:ignore="LabelFor" />
 
             <Button
                 android:id="@+id/Button_post"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:background="@drawable/buttonanimationcolor"
                 android:text="@string/post"
-                android:layout_margin="20dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
                 android:textColor="@color/colorWhite" />
         </LinearLayout>

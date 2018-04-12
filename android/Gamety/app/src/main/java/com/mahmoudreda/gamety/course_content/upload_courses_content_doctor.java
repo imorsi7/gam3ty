@@ -30,8 +30,6 @@ public class upload_courses_content_doctor extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-
         int id = item.getItemId();
         switch (id) {
             case R.id.navigation_dashboard:

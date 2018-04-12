@@ -3,5 +3,5 @@
 
     <item
         android:id="@+id/exit"
-        android:title="Exit"></item>
+        android:title="@string/exit" />
 </menu>

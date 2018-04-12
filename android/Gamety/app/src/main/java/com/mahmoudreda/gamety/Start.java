@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.mahmoudreda.gamety.course_content.upload_courses_content_doctor;
 import com.mahmoudreda.gamety.sign_package.Sign_up;
@@ -14,6 +15,7 @@ import com.mahmoudreda.gamety.sign_package.sign_in;
 
 public class Start extends AppCompatActivity {
     Button y, x;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,9 @@ public class Start extends AppCompatActivity {
 
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
         String Name = sharedpreferences.getString("Name", null); // getting String;
-        if (Name == null) {
-        }else if (Name.length() == 8) {
+        if (Name == null)
+            Toast.makeText(this, "Welcome to Gamety", Toast.LENGTH_SHORT).show();
+        else if (Name.length() == 8) {
             Intent i = new Intent(getApplicationContext(), MainActivity_student.class);
             startActivity(i);
             finish();
