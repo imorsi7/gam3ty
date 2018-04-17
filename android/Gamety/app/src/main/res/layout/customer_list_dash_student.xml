@@ -25,6 +25,10 @@
         android:text="@string/text2"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-
         android:textColor="#575757" />
+
+    <TextView
+        android:id="@+id/id_customer"
+        android:layout_height="0dp"
+        android:layout_width="0dp" />
 </LinearLayout>

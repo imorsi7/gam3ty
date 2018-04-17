@@ -45,8 +45,10 @@ public class MY_adapter extends BaseAdapter {
             view = inf.inflate(R.layout.customer_list_dash_student, null);
         TextView x = view.findViewById(R.id.title_customer);
         TextView y = view.findViewById(R.id.description_customer);
+        TextView f = view.findViewById(R.id.id_customer);
         x.setText(list.get(position).getTitle());
         y.setText(list.get(position).getDesc());
+        f.setText(list.get(position).getid());
         return view;
     }
 }

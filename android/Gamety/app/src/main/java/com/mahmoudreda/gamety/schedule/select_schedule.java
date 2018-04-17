@@ -3,10 +3,11 @@ package com.mahmoudreda.gamety.schedule;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -22,12 +23,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class select_schedule extends AppCompatActivity {
-    EditText period, teacher_name, course_name, time, holle, day;
-    String periods, teacher_names, course_names, times, holles, days, radioButton_1s, radioButton_2s, radioButton_3s;
+    EditText teacher_name, holle;
+    String teacher_names, course_names, times, holles, days, years, departments, smesters;
     Button upload;
-    RadioGroup radioGroup_1, radioGroup_2, radioGroup_3;
-    RadioButton radioButton_1, radioButton_2, radioButton_3;
-    int radioId_1, radioId_2, radioId_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,50 +34,174 @@ public class select_schedule extends AppCompatActivity {
 
         upload = findViewById(R.id.button_upload_schedule);
 
-        period = findViewById(R.id.EditText_period);
         teacher_name = findViewById(R.id.EditText_teacher_name);
-        course_name = findViewById(R.id.EditText_course_name);
-        time = findViewById(R.id.EditText_time);
         holle = findViewById(R.id.EditeText_holle);
-        day = findViewById(R.id.EditText_day);
 
-        radioGroup_1 = findViewById(R.id.radioGroup_1);
-        radioGroup_2 = findViewById(R.id.radioGroup_2);
-        radioGroup_3 = findViewById(R.id.radioGroup_3);
+        Spinner mySpinner = findViewById(R.id.spinner1);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.year));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner.setAdapter(myAdapter);
+        mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0)
+                    years = "Firstyear";
+                else if (i == 1)
+                    years = "Secondyear";
+                else if (i == 2)
+                    years = "Thirdyear";
+                else if (i == 3)
+                    years = "Fourthyear";
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+        Spinner mySpinner2 = findViewById(R.id.spinner2);
+        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.department));
+        myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner2.setAdapter(myAdapter2);
+        mySpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0)
+                    departments = "General";
+                else if (i == 1)
+                    departments = "CS";
+                else if (i == 2)
+                    departments = "IS";
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        Spinner mySpinner3 = findViewById(R.id.spinner3);
+        ArrayAdapter<String> myAdapter3 = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.semestr));
+        myAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner3.setAdapter(myAdapter3);
+        mySpinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0)
+                    smesters = "1";
+                else if (i == 1)
+                    smesters = "2";
+                else if (i == 2)
+                    smesters = "3";
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        Spinner mySpinner4 = findViewById(R.id.spinner4);
+        ArrayAdapter<String> myAdapter4 = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.day));
+        myAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner4.setAdapter(myAdapter4);
+        mySpinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0)
+                    days = "sunday";
+                else if (i == 1)
+                    days = "monday";
+                else if (i == 2)
+                    days = "thursday";
+                else if (i == 3)
+                    days = "wednesday";
+                else if (i == 4)
+                    days = "thursday";
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        Spinner mySpinner5 = findViewById(R.id.spinner5);
+        ArrayAdapter<String> myAdapter5 = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.time));
+        myAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner5.setAdapter(myAdapter5);
+        mySpinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0)
+                    times = "9:00";
+                else if (i == 1)
+                    times = "9:45";
+                else if (i == 2)
+                    times = "10:30";
+                else if (i == 3)
+                    times = "11:15";
+                else if (i == 4)
+                    times = "12:00";
+                else if (i == 5)
+                    times = "12:45";
+                else if (i == 6)
+                    times = "1:30";
+                else if (i == 7)
+                    times = "2:15";
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        Spinner mySpinner6 = findViewById(R.id.spinner6);
+        ArrayAdapter<String> myAdapter6 = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.course_name));
+        myAdapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner6.setAdapter(myAdapter6);
+        mySpinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0)
+                    course_names = "111";
+                else if (i == 1)
+                    course_names = "222";
+                else if (i == 2)
+                    course_names = "333";
+                else if (i == 3)
+                    course_names = "444";
+                else if (i == 4)
+                    course_names = "555";
+                else if (i == 5)
+                    course_names = "666";
+                else if (i == 6)
+                    course_names = "777";
+                else if (i == 7)
+                    course_names = "888";
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                days = day.getText().toString().trim();
-                periods = period.getText().toString().trim();
+
                 teacher_names = teacher_name.getText().toString().trim();
-                course_names = course_name.getText().toString().trim();
-                times = time.getText().toString().trim();
                 holles = holle.getText().toString().trim();
 
-                radioId_1 = radioGroup_1.getCheckedRadioButtonId();
-                radioId_2 = radioGroup_2.getCheckedRadioButtonId();
-                radioId_3 = radioGroup_3.getCheckedRadioButtonId();
 
-                radioButton_1 = findViewById(radioId_1);
-                radioButton_2 = findViewById(radioId_2);
-                radioButton_3 = findViewById(radioId_3);
-
-                radioButton_1s = (String) radioButton_1.getText();
-                radioButton_2s = (String) radioButton_2.getText();
-                radioButton_3s = (String) radioButton_3.getText();
-
-                if (days.isEmpty())
-                    day.setError("period Cannot be Empty");
-                else if (periods.isEmpty())
-                    period.setError("period Cannot be Empty");
-                else if (teacher_names.isEmpty())
+                if (teacher_names.isEmpty())
                     teacher_name.setError("teacher name Cannot be Empty");
-                else if (course_names.isEmpty())
-                    period.setError("course name Cannot be Empty");
-                else if (times.isEmpty())
-                    time.setError("time Cannot be Empty");
                 else if (holles.isEmpty())
                     holle.setError("hall Cannot be Empty");
                 else
@@ -91,7 +213,7 @@ public class select_schedule extends AppCompatActivity {
     private void sent() {
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gamety.000webhostapp.com/schedual.php?appointment=" + times + "&teacher_name=" + teacher_names + "&leacture_hall=" + holles + "&semester_NO=" + radioButton_3s + "&course_ID=" + course_names + "&year=" + radioButton_1s + "&department=" + radioButton_2s + "&day=" + days + "&period=" + periods;
+        String LOGIN_URL = "https://gamety.000webhostapp.com/schedual.php?appointment=" + times + "&teacher_name=" + teacher_names + "&leacture_hall=" + holles + "&semester_NO=" + smesters + "&course_ID=" + course_names + "&year=" + years + "&department=" + departments + "&day=" + days;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override
@@ -114,15 +236,14 @@ public class select_schedule extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("periods", periods);
                 params.put("teacher", teacher_names);
                 params.put("course", course_names);
                 params.put("times", times);
                 params.put("holles", holles);
                 params.put("day", days);
-                params.put("radio1", radioButton_1s);
-                params.put("radio2", radioButton_2s);
-                params.put("radio3", radioButton_3s);
+                params.put("years", years);
+                params.put("department", departments);
+                params.put("smesters", smesters);
                 return params;
             }
         };

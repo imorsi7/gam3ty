@@ -4,9 +4,13 @@ public class item_Dash_Board {
 
     private String title;
     private String Desc;
+    private String id;
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    public void setid(String id) {
+        this.id = id;
     }
 
     void setDesc(String desc) {
@@ -15,6 +19,9 @@ public class item_Dash_Board {
 
     public String getTitle() {
         return title;
+    }
+    public String getid() {
+        return id;
     }
 
     String getDesc() {

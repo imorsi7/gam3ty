@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.mahmoudreda.gamety.course_content.Courses_content;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board;
 import com.mahmoudreda.gamety.schedule.schedule_view;
-import com.mahmoudreda.gamety.sign_package.Sign_up;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 
 public class MainActivity_student extends AppCompatActivity {
@@ -66,14 +65,8 @@ public class MainActivity_student extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.navigation_dashboard:
-                Toast.makeText(this, "current year", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(MainActivity_student.this, Sign_up.class);
+                Intent intent2 = new Intent(MainActivity_student.this, current_year.class);
                 startActivity(intent2);
-                finish();
-                SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString("Name", null);
-                editor.apply();
                 break;
             case R.id.Log_out:
                 Toast.makeText(this, "log out", Toast.LENGTH_SHORT).show();

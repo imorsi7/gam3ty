@@ -14,11 +14,12 @@ import android.widget.Toast;
 
 import com.mahmoudreda.gamety.course_content.Courses_content;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec;
+import com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec_display_delete;
 import com.mahmoudreda.gamety.schedule.select_schedule;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 
 public class MainActivity_secretary extends AppCompatActivity {
-    Button x, y, k;
+    Button x, y, k ,l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +29,19 @@ public class MainActivity_secretary extends AppCompatActivity {
         x = findViewById(R.id.Button_schedule_sec);
         y = findViewById(R.id.Button_dash_board_sec);
         k = findViewById(R.id.Button_link_techer);
+        l=findViewById(R.id.Button_schedule_sec_display);
+
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), select_schedule.class);
+                startActivity(i);
+            }
+        });
+        l.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ADV_dash_board_sec_display_delete.class);
                 startActivity(i);
             }
         });
@@ -49,6 +59,7 @@ public class MainActivity_secretary extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
     @Override

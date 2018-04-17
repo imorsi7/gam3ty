@@ -14,13 +14,4 @@
         android:gravity="center"
         android:text="@string/welcome_to_gamety" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView7"
-        android:layout_marginEnd="42dp"
-        android:layout_marginTop="71dp" />
-
 </RelativeLayout>

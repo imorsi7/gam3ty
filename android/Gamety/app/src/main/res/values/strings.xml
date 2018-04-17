@@ -31,10 +31,6 @@
     <string name="enjoy_now">Enjoy Now..</string>
     <string name="post">Post</string>
     <string name="years">Years :</string>
-    <string name="first_year">Firstyear</string>
-    <string name="second_year">Secondyear</string>
-    <string name="third_year">Thirdyear</string>
-    <string name="fourth_year">Fourthyear</string>
     <string name="departments">Departments :</string>
     <string name="general">General</string>
     <string name="cs">CS</string>
@@ -67,4 +63,52 @@
     <string name="upload_courses_content">upload courses content</string>
     <string name="exit">Exit</string>
     <string name="current_year">Current year</string>
+    <string name="new_dash_board">New dash board</string>
+    <string name="time">Time :</string>
+    <string-array name="year">
+        <item>First year</item>
+        <item>Second year</item>
+        <item>Third year</item>
+        <item>Fourth year</item>
+    </string-array>
+    <string-array name="department">
+        <item>General</item>
+        <item>CS</item>
+        <item>IS</item>
+    </string-array>
+    <string-array name="semestr">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="day">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>9:00</item>
+        <item>9:45</item>
+        <item>10:30</item>
+        <item>11:15</item>
+        <item>12:00</item>
+        <item>12:45</item>
+        <item>1:30</item>
+        <item>2:15</item>
+    </string-array>
+
+    <string-array name="course_name">
+        <item>C++</item>
+        <item>Math 2</item>
+        <item>Compiler</item>
+        <item>Data Base</item>
+        <item>Java</item>
+        <item>C#</item>
+        <item>Image Processing</item>
+        <item>Micro Processor</item>
+    </string-array>
+
 </resources>
