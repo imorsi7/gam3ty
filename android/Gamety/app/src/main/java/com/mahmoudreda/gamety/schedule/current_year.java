@@ -1,4 +1,4 @@
-package com.mahmoudreda.gamety;
+package com.mahmoudreda.gamety.schedule;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,8 +11,16 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.mahmoudreda.gamety.R;
+
 public class current_year extends AppCompatActivity {
-    String years, departments, smesters;
+    String years, departments, smesters, id;
     Button ok;
 
     @Override
@@ -20,11 +28,14 @@ public class current_year extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_year);
         ok = findViewById(R.id.button_ok);
+        SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+        id = sharedpreferences.getString("Name", null); // getting String;
+
         save();
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(current_year.this, "Saved successfully", Toast.LENGTH_LONG).show();
+                current_years();
             }
         });
     }
@@ -40,28 +51,16 @@ public class current_year extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
                     years = "Firstyear";
-                    SharedPreferences sharedpreferences_year = getSharedPreferences("year", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_year.edit();
-                    editor.putString("year", years);
-                    editor.apply();
+
                 } else if (i == 1) {
                     years = "Secondyear";
-                    SharedPreferences sharedpreferences_year = getSharedPreferences("year", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_year.edit();
-                    editor.putString("year", years);
-                    editor.apply();
+
                 } else if (i == 2) {
                     years = "Thirdyear";
-                    SharedPreferences sharedpreferences_year = getSharedPreferences("year", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_year.edit();
-                    editor.putString("year", years);
-                    editor.apply();
+
                 } else if (i == 3) {
                     years = "Fourthyear";
-                    SharedPreferences sharedpreferences_year = getSharedPreferences("year", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_year.edit();
-                    editor.putString("year", years);
-                    editor.apply();
+
                 }
             }
 
@@ -80,22 +79,13 @@ public class current_year extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
                     departments = "General";
-                    SharedPreferences sharedpreferences_department = getSharedPreferences("department", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_department.edit();
-                    editor.putString("department", departments);
-                    editor.apply();
+
                 } else if (i == 1) {
                     departments = "CS";
-                    SharedPreferences sharedpreferences_department = getSharedPreferences("department", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_department.edit();
-                    editor.putString("department", departments);
-                    editor.apply();
+
                 } else if (i == 2) {
                     departments = "IS";
-                    SharedPreferences sharedpreferences_department = getSharedPreferences("department", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_department.edit();
-                    editor.putString("department", departments);
-                    editor.apply();
+
                 }
             }
 
@@ -115,22 +105,10 @@ public class current_year extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
                     smesters = "1";
-                    SharedPreferences sharedpreferences_semester = getSharedPreferences("semester", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_semester.edit();
-                    editor.putString("semester", smesters);
-                    editor.apply();
                 } else if (i == 1) {
                     smesters = "2";
-                    SharedPreferences sharedpreferences_semester = getSharedPreferences("semester", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_semester.edit();
-                    editor.putString("semester", smesters);
-                    editor.apply();
                 } else if (i == 2) {
                     smesters = "3";
-                    SharedPreferences sharedpreferences_semester = getSharedPreferences("semester", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences_semester.edit();
-                    editor.putString("semester", smesters);
-                    editor.apply();
                 }
             }
 
@@ -139,6 +117,32 @@ public class current_year extends AppCompatActivity {
 
             }
         });
+    }
+
+    // Method To Sign up Student to Data DataBase
+    private void current_years() {
+
+        // URL To Fetch Data From The Server
+        String LOGIN_URL = "https://gamety.000webhostapp.com/Current_Year.php?id=" + id + "&stdYear=" + years + "&stdDep=" + departments + "&stdSemester=" + smesters;
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (response.trim().equals("post successful")) {
+                    Toast.makeText(getApplicationContext(), "sent successful", Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(getApplicationContext(), "Error Send", Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "No Internet Access", Toast.LENGTH_LONG).show();
+            }
+        }) {
+        };
+
+        // Execute Requesting
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 
 }

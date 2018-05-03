@@ -44,7 +44,7 @@
             android:name=".schedule.select_schedule"
             android:label="Schedule" />
         <activity android:name=".dash_board.ADV_dash_board_sec_display_delete" />
-        <activity android:name=".current_year"></activity>
+        <activity android:name=".schedule.current_year"></activity>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
     android:padding="9dp"
     android:layout_gravity="center"
     android:background="@drawable/packground"
-    tools:context="com.mahmoudreda.gamety.current_year">
+    tools:context="com.mahmoudreda.gamety.schedule.current_year">
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

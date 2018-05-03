@@ -12,13 +12,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.mahmoudreda.gamety.course_content.Courses_content;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board;
+import com.mahmoudreda.gamety.schedule.current_year;
 import com.mahmoudreda.gamety.schedule.schedule_view;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 
 public class MainActivity_student extends AppCompatActivity {
     Button x, y, k;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +35,10 @@ public class MainActivity_student extends AppCompatActivity {
         x = findViewById(R.id.Button_Schedule);
         y = findViewById(R.id.Button_dash_board);
         k = findViewById(R.id.Button_courses_content);
+
+        SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+        id = sharedpreferences.getString("Name", null); // getting String;
+
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,9 +94,9 @@ public class MainActivity_student extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
+
 }
-
-
 /*
 *
 * startActivity(new Intent(Intent.ACTION_SEND , Uri.parse("http:///www.google.com/")));
