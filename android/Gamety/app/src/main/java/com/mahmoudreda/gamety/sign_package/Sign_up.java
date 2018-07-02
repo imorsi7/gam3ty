@@ -76,7 +76,7 @@ public class Sign_up extends AppCompatActivity {
     private void Sign_teacher() {
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gamety.000webhostapp.com/signuptech.php?teacher_ID=" + id_sign_up + "&first_name=" + first_name + "&middle_name=" + middle_name + "&last_name=" + last_name + "&email=" + email_sign_up + "&passcode=" + password_sign_up;
+        String LOGIN_URL = "https://gametyapp.000webhostapp.com/signuptech.php?teacher_ID=" + id_sign_up + "&first_name=" + first_name + "&middle_name=" + middle_name + "&last_name=" + last_name + "&email=" + email_sign_up + "&passcode=" + password_sign_up;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override
@@ -121,7 +121,7 @@ public class Sign_up extends AppCompatActivity {
     private void Sign_up_student() {
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gamety.000webhostapp.com/signupstu.php?student_ID=" + id_sign_up + "&first_name=" + first_name + "&middle_name=" + middle_name + "&last_name=" + last_name + "&email=" + email_sign_up + "&passcode=" + password_sign_up;
+        String LOGIN_URL = "https://gametyapp.000webhostapp.com/signupstu.php?student_ID=" + id_sign_up + "&first_name=" + first_name + "&middle_name=" + middle_name + "&last_name=" + last_name + "&email=" + email_sign_up + "&passcode=" + password_sign_up;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:padding="9dp"
+    tools:context="com.mahmoudreda.gamety.toalbar.about_app">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:text="@string/have_you_ever_thought_that_your_study_could_be_more_easy_your_college_could_get_more_enjoyable_your_day_can_be_more_organized_with_an_easy_way_maybe_with_just_a_click_of_a_button_have_you_thought_that_you_can_get_your_subjects_material_with_an_easy_way_maybe_even_have_it_on_your_mobile_phone_with_an_on_the_spot_notification_when_any_event_happen_yes_you_will_have_all_of_these_but_how_sir_you_can_share_your_subject_material_with_all_of_your_students_with_just_too_little_steps_secretary_you_can_notify_students_with_any_new_news_so_no_one_miss_any_important_thing_all_of_these_requirements_will_be_delivered_right_to_you_in_your_new_application_gamatey"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
+</LinearLayout>

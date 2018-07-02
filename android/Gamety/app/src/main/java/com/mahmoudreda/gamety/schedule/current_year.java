@@ -42,26 +42,27 @@ public class current_year extends AppCompatActivity {
 
     public void save() {
         Spinner mySpinner = findViewById(R.id.spinner1);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(this,
+        final ArrayAdapter<String> myAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.year));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
-                    years = "Firstyear";
+                for (int h = 0; h <= i; h++)
+                    if (i == 0) {
+                        years = "Firstyear";
 
-                } else if (i == 1) {
-                    years = "Secondyear";
+                    } else if (i == 1) {
+                        years = "Secondyear";
 
-                } else if (i == 2) {
-                    years = "Thirdyear";
+                    } else if (i == 2) {
+                        years = "Thirdyear";
 
-                } else if (i == 3) {
-                    years = "Fourthyear";
+                    } else if (i == 3) {
+                        years = "Fourthyear";
 
-                }
+                    }
             }
 
             @Override
@@ -70,23 +71,15 @@ public class current_year extends AppCompatActivity {
             }
         });
         Spinner mySpinner2 = findViewById(R.id.spinner2);
-        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(this,
+        final ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.department));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner2.setAdapter(myAdapter2);
         mySpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
-                    departments = "General";
-
-                } else if (i == 1) {
-                    departments = "CS";
-
-                } else if (i == 2) {
-                    departments = "IS";
-
-                }
+                for (int h = 0; h <= i; h++)
+                    departments = myAdapter2.getItem(h);
             }
 
             @Override
@@ -96,20 +89,15 @@ public class current_year extends AppCompatActivity {
         });
 
         Spinner mySpinner3 = findViewById(R.id.spinner3);
-        ArrayAdapter<String> myAdapter3 = new ArrayAdapter<>(this,
+        final ArrayAdapter<String> myAdapter3 = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.semestr));
         myAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner3.setAdapter(myAdapter3);
         mySpinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
-                    smesters = "1";
-                } else if (i == 1) {
-                    smesters = "2";
-                } else if (i == 2) {
-                    smesters = "3";
-                }
+                for (int h = 0; h <= i; h++)
+                    smesters = myAdapter3.getItem(h);
             }
 
             @Override
@@ -123,7 +111,7 @@ public class current_year extends AppCompatActivity {
     private void current_years() {
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gamety.000webhostapp.com/Current_Year.php?id=" + id + "&stdYear=" + years + "&stdDep=" + departments + "&stdSemester=" + smesters;
+        String LOGIN_URL = "https://gametyapp.000webhostapp.com/Current_Year.php?id=" + id + "&stdYear=" + years + "&stdDep=" + departments + "&stdSemester=" + smesters;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

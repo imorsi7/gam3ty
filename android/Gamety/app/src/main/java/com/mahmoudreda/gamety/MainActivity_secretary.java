@@ -15,11 +15,12 @@ import android.widget.Toast;
 import com.mahmoudreda.gamety.course_content.Courses_content;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board_sec_display_delete;
+import com.mahmoudreda.gamety.exam_result.upload_result;
 import com.mahmoudreda.gamety.schedule.select_schedule;
 import com.mahmoudreda.gamety.sign_package.sign_in;
 
 public class MainActivity_secretary extends AppCompatActivity {
-    Button x, y, k ,l;
+    Button x, y, k, l, r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,8 @@ public class MainActivity_secretary extends AppCompatActivity {
         x = findViewById(R.id.Button_schedule_sec);
         y = findViewById(R.id.Button_dash_board_sec);
         k = findViewById(R.id.Button_link_techer);
-        l=findViewById(R.id.Button_schedule_sec_display);
-
+        l = findViewById(R.id.Button_schedule_sec_display);
+        r = findViewById(R.id.result);
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +57,13 @@ public class MainActivity_secretary extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Courses_content.class);
+                startActivity(i);
+            }
+        });
+        r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), upload_result.class);
                 startActivity(i);
             }
         });

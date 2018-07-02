@@ -4,33 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/packground"
+    android:background="#f1f1f1"
     tools:context="com.mahmoudreda.gamety.Start">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/button_sign_in"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
-        android:text="@string/welcome_to_gamety"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorHide"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteY="55dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView5"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/the_best_service_app"
-        android:textColor="@color/colorHide"
-        android:textSize="20sp" />
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/testb" />
 
     <Button
         android:id="@+id/button_sign_in"

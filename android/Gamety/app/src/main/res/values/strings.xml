@@ -42,8 +42,8 @@
     <string name="day">Day :</string>
     <string name="sun_day">sunday</string>
     <string name="period">period :</string>
-    <string name="teacher_name">teacher name</string>
-    <string name="course_name">course name</string>
+    <string name="teacher_name">teacher name :</string>
+    <string name="course_name">course name :</string>
     <string name="_9_11">9:11</string>
     <string name="_1220">1220</string>
     <string name="upload">Upload</string>
@@ -65,6 +65,31 @@
     <string name="current_year">Current year</string>
     <string name="new_dash_board">New dash board</string>
     <string name="time">Time :</string>
+    <string name="teacher_id">teacher ID :</string>
+    <string name="hall">hall :</string>
+    <string name="link">link</string>
+    <string name="add">add</string>
+    <string name="student_s_schedule">student\'s schedule</string>
+    <string name="teacher_s_schedule">teacher\'s schedule</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="set_alar">Set alarm</string>
+    <string name="unset_alarm">Unset alarm</string>
+    <string name="set_the_alarm_clock">Set the alarm clock!</string>
+    <string name="unset">Unset</string>
+    <string name="profile">Profile</string>
+    <string name="change_password">Change password</string>
+    <string name="new_password">| New password</string>
+    <string name="result_link">| Result link</string>
+    <string name="upload_result">upload result</string>
+    <string name="result">Result</string>
+    <string name="todo">TODO</string>
+    <string name="share_app">Share app</string>
+    <string name="scan_to_download">Scan to download</string>
+    <string name="share_download_link">Share download link</string>
+    <string name="have_you_ever_thought_that_your_study_could_be_more_easy_your_college_could_get_more_enjoyable_your_day_can_be_more_organized_with_an_easy_way_maybe_with_just_a_click_of_a_button_have_you_thought_that_you_can_get_your_subjects_material_with_an_easy_way_maybe_even_have_it_on_your_mobile_phone_with_an_on_the_spot_notification_when_any_event_happen_yes_you_will_have_all_of_these_but_how_sir_you_can_share_your_subject_material_with_all_of_your_students_with_just_too_little_steps_secretary_you_can_notify_students_with_any_new_news_so_no_one_miss_any_important_thing_all_of_these_requirements_will_be_delivered_right_to_you_in_your_new_application_gamatey">Have you ever thought that your study could be more easy, your college could get more enjoyable, your day can be more organized with an easy way maybe with just a click of a button, have you thought that you can get your subjects material with an easy way maybe even have it on your mobile phone, with an on the spot notification when any event happen, yes you will have all of these but how? Sir you can share your subject material with all of your students with just too little steps, Secretary you can notify students with any new news so no one miss any important thing, all of these requirements will be delivered right to you in your new application “Gamatey”.</string>
+    <string name="about_app">About app</string>
+    <string name="old_password">|Old password</string>
+    <string name="re_enter_new_password">|Re enter new password</string>
     <string-array name="year">
         <item>First year</item>
         <item>Second year</item>
@@ -79,7 +104,6 @@
     <string-array name="semestr">
         <item>1</item>
         <item>2</item>
-        <item>3</item>
     </string-array>
     <string-array name="day">
         <item>Sunday</item>
@@ -88,7 +112,6 @@
         <item>Wednesday</item>
         <item>Thursday</item>
     </string-array>
-
     <string-array name="time">
         <item>9:00</item>
         <item>9:45</item>
@@ -99,7 +122,6 @@
         <item>1:30</item>
         <item>2:15</item>
     </string-array>
-
     <string-array name="course_name">
         <item>C++</item>
         <item>Math 2</item>
@@ -109,6 +131,44 @@
         <item>C#</item>
         <item>Image Processing</item>
         <item>Micro Processor</item>
+        <item>Free</item>
     </string-array>
-
+    <string-array name="hall">
+        <item>2101</item>
+        <item>2102</item>
+        <item>2103</item>
+        <item>2104</item>
+        <item>2105</item>
+        <item>2106</item>
+        <item>2109</item>
+        <item>2110</item>
+        <item>2111</item>
+        <item>2112</item>
+        <item>2113</item>
+        <item>2114</item>
+        <item>2115</item>
+        <item>2116</item>
+        <item>2117</item>
+        <item>2118</item>
+        <item>2119</item>
+        <item>2122</item>
+        <item>2123</item>
+        <item>2124</item>
+        <item>2125</item>
+        <item>2126</item>
+        <item>2127</item>
+        <item>2128</item>
+        <item>2129</item>
+        <item></item>
+    </string-array>
+    <string-array name="teacher_name">
+        <item>shady mohamed</item>
+        <item>mohamed hassan</item>
+        <item>kamal hamoda</item>
+        <item>ismael amr</item>
+        <item>omaema ahmed </item>
+        <item>salah shaban</item>
+        <item>gehad galal</item>
+        <item>same aladl</item>
+    </string-array>
 </resources>

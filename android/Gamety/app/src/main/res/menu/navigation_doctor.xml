@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile_doctor"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/share_app"
+        android:checkable="false"
+        android:title="@string/share_app" />
+    <item
+        android:id="@+id/about_app"
+        android:checkable="false"
+        android:title="@string/about_app" />
+
+    <item
+        android:id="@+id/Log_out"
+        android:title="@string/log_out" />
+
+</menu>

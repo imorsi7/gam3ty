@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:background="@drawable/packground"
     tools:context="com.mahmoudreda.gamety.MainActivity_student">
 
@@ -48,6 +50,22 @@
         android:layout_marginTop="42dp"
         android:background="@drawable/buttonanimationcolor"
         android:text="@string/courses_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <Button
+        android:id="@+id/Button_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Button_courses_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/buttonanimationcolor"
+        android:text="@string/result"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="8dp"

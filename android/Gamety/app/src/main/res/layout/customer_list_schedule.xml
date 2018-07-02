@@ -1,59 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="1dp"
-        android:text="@string/text"
-        android:textAlignment="textEnd"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/colorHide"
-        android:textStyle="bold|italic" />
-
-
-    <TextView
-        android:id="@+id/hall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:text="@string/text2"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#575757" />
-
-    <TextView
-        android:id="@+id/teacher_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:text="@string/text2"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#575757" />
+    android:orientation="vertical"
+    android:padding="12dp">
 
     <TextView
         android:id="@+id/course_name"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="7dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:text="@string/text2"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#575757" />
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:paddingBottom="9dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorHide"
+        android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/day"
+        android:id="@+id/teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/text2"
+        android:textAlignment="viewEnd"
+        android:paddingBottom="9dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#575757"
+        tools:ignore="RelativeOverlap" />
+
+    <LinearLayout
+        android:id="@+id/list2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:text="@string/text2"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#575757" />
-</LinearLayout>
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/teacher_name"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/hall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/lecture"
+            android:text="@string/text2"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#575757" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text"
+            android:drawableStart="@drawable/time"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#575757" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/hall"
+            android:text="@string/text2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#575757" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list2"
+        android:layout_marginTop="17dp"
+        android:background="#DEDEDE" />
+
+</RelativeLayout>

@@ -2,8 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/current_year"
         android:title="@string/current_year" />
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@id/share_app"
+        android:checkable="false"
+        android:title="@string/share_app" />
+    <item
+        android:id="@id/about_app"
+        android:checkable="false"
+        android:title="@string/about_app" />
 
     <item
         android:id="@+id/Log_out"

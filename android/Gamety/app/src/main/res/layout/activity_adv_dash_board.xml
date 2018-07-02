@@ -2,11 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/container1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="4dp"
-    android:layout_marginRight="4dp"
     tools:context="com.mahmoudreda.gamety.dash_board.ADV_dash_board">
 
 

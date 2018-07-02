@@ -33,7 +33,7 @@ public class sign_in extends AppCompatActivity {
 
     EditText id, pass;
     Button logIn;
-    String id_sign_in, password_sign_in, sec_id = "1010", sec_pass = "gamety admin";
+    String id_sign_in, password_sign_in, sec_id = "1010", sec_pass = "1010";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +45,7 @@ public class sign_in extends AppCompatActivity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                id_sign_in = id.getText().toString();
+                id_sign_in = id.getText().toString().trim();
                 password_sign_in = pass.getText().toString();
 
                 if (id_sign_in.isEmpty())
@@ -122,7 +122,7 @@ public class sign_in extends AppCompatActivity {
         password_sign_in = pass.getText().toString().trim();
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gamety.000webhostapp.com/signintech.php?teacher_ID=" + id_sign_in + "&passcode=" + password_sign_in;
+        String LOGIN_URL = "https://gametyapp.000webhostapp.com/signintech.php?teacher_ID=" + id_sign_in + "&passcode=" + password_sign_in;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override
@@ -174,7 +174,7 @@ public class sign_in extends AppCompatActivity {
         password_sign_in = pass.getText().toString().trim();
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gamety.000webhostapp.com/signinstu.php?student_ID=" + id_sign_in + "&passcode=" + password_sign_in;
+        String LOGIN_URL = "https://gametyapp.000webhostapp.com/signinstu.php?student_ID=" + id_sign_in + "&passcode=" + password_sign_in;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override

@@ -12,20 +12,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.mahmoudreda.gamety.course_content.Courses_content;
+import com.mahmoudreda.gamety.course_content.course_content_student;
 import com.mahmoudreda.gamety.dash_board.ADV_dash_board;
+import com.mahmoudreda.gamety.exam_result.result_view;
+import com.mahmoudreda.gamety.profile.profile_student;
 import com.mahmoudreda.gamety.schedule.current_year;
 import com.mahmoudreda.gamety.schedule.schedule_view;
 import com.mahmoudreda.gamety.sign_package.sign_in;
+import com.mahmoudreda.gamety.toalbar.about_app;
+import com.mahmoudreda.gamety.toalbar.qr;
 
 public class MainActivity_student extends AppCompatActivity {
-    Button x, y, k;
+    Button x, y, k, r;
     String id;
 
     @Override
@@ -35,6 +33,7 @@ public class MainActivity_student extends AppCompatActivity {
         x = findViewById(R.id.Button_Schedule);
         y = findViewById(R.id.Button_dash_board);
         k = findViewById(R.id.Button_courses_content);
+        r = findViewById(R.id.Button_result);
 
         SharedPreferences sharedpreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
         id = sharedpreferences.getString("Name", null); // getting String;
@@ -56,7 +55,15 @@ public class MainActivity_student extends AppCompatActivity {
         k.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Courses_content.class);
+                Intent i = new Intent(getApplicationContext(), course_content_student.class);
+                startActivity(i);
+            }
+        });
+
+        r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), result_view.class);
                 startActivity(i);
             }
         });
@@ -76,9 +83,21 @@ public class MainActivity_student extends AppCompatActivity {
 
         int id = item.getItemId();
         switch (id) {
-            case R.id.navigation_dashboard:
+            case R.id.profile:
+                Intent intent3 = new Intent(MainActivity_student.this, profile_student.class);
+                startActivity(intent3);
+                break;
+            case R.id.current_year:
                 Intent intent2 = new Intent(MainActivity_student.this, current_year.class);
                 startActivity(intent2);
+                break;
+            case R.id.share_app:
+                Intent intent5 = new Intent(MainActivity_student.this, qr.class);
+                startActivity(intent5);
+                break;
+            case R.id.about_app:
+                Intent intent6 = new Intent(MainActivity_student.this,about_app.class);
+                startActivity(intent6);
                 break;
             case R.id.Log_out:
                 Toast.makeText(this, "log out", Toast.LENGTH_SHORT).show();
@@ -97,7 +116,3 @@ public class MainActivity_student extends AppCompatActivity {
 
 
 }
-/*
-*
-* startActivity(new Intent(Intent.ACTION_SEND , Uri.parse("http:///www.google.com/")));
-* */

@@ -28,7 +28,7 @@ public class ADV_dash_board extends AppCompatActivity {
         final ListView z = findViewById(R.id.list_dash_student);
 
         // URL To Fetch Data From The Server
-        String GETURL = "https://gamety.000webhostapp.com/get.php";
+        String GETURL = "https://gametyapp.000webhostapp.com/get.php";
 
         // Method To Get Chat The Data From DataBase
 

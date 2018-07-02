@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#EEE"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    tools:context="com.mahmoudreda.gamety.exam_result.result_view">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/about_me"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/frameLayout">
+        <TextView
+            android:id="@+id/course_name_studen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:textAlignment="center"
+            android:layout_marginTop="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#575757"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/linee"
+            />
+
+        <TextView
+            android:id="@+id/textView_link"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/link"
+            android:autoLink ="all"
+            android:clickable="true"
+            android:drawableStart="@drawable/link"
+            android:textColor="@color/colorHide"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:focusable="true" />
+
+    </FrameLayout>
+</RelativeLayout>
+
