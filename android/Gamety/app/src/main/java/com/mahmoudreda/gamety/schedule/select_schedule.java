@@ -200,7 +200,9 @@ public class select_schedule extends AppCompatActivity {
     private void sent() {
 
         // URL To Fetch Data From The Server
-        String LOGIN_URL = "https://gametyapp.000webhostapp.com/schedual.php?appointment=" + times + "&teacher_name=" + teacher_names + "&leacture_hall=" + holles + "&semester_NO=" + smesters + "&course_ID=" + course_names + "&year=" + years + "&department=" + departments + "&day=" + days;
+        String temp="https://gametyapp.000webhostapp.com/schedual.php?appointment=" + times + "&teacher_name=" + teacher_names + "&leacture_hall=" + holles + "&semester_NO=" + smesters + "&course_ID=" + course_names + "&year=" + years + "&department=" + departments + "&day=" + days;
+        temp = temp.replaceAll(" ", "%20");
+        String LOGIN_URL = temp;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL, new Response.Listener<String>() {
             @Override
